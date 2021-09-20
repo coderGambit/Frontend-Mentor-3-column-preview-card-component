@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-very-dark-cyan: hsl(184, 100%, 22%);
+    --clr-cyan: hsl(179, 100%, 13%);
+    --clr-paragraph: hsl(0, 0%, 100%);
+    --clr-heading-bg-button: hsl(0, 0%, 95%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 375px);
+    font-family: Lexend,sans-serif;
+    color: var(--clr-paragraph);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    padding: 50px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.sedanCard{
+    background-color: var(--clr-bright-orange);
+    border-radius: 8px 0 0 8px;
+}
+
+.suvCard{
+    background-color: var(--clr-very-dark-cyan);
+}
+
+.luxuryCard{
+    background-color: var(--clr-cyan);
+    border-radius: 0 8px 8px 0;
+}
+
+h1{
+    color: var(--clr-heading-bg-button);
+    font-family: "Big Shoulders Display", sans-serif;
+}
+
+.description{
+    line-height: 1.5;
+}
+
+.learMore{
+    border: none;
+    margin-top: 50px;
+    border-radius: 100px;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.learMore:hover{
+    color: var(--clr-heading-bg-button);
+    border: 2px solid;
+    background: none;
+}
+
+.sedanButton{
+    color: var(--clr-bright-orange);;
+}
+
+.suvButton{
+    color: var(--clr-very-dark-cyan);;
+}
+
+.luxuryButton{
+    color: var(--clr-cyan);;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    color: black;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 1125px) {
+    .card{
+        border-radius: 0;
+    }
+}
